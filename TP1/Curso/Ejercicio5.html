@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incripcion al Curso de Ingles Basico</title>
+</head>
+<body>
+    <header>
+        <h1>Curso de Ingles Basico</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#inscripcion">Inscripcion</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+<main>
+    <section id="inicio">
+        <h2>Informacion del Curso</h2>
+        <p>El curso destinado a personas que quieran aprender ingles desde cero y mejorar su comuicacion oral y escrita.</p>
+        <ul>
+            <li>Duracion: 3 meses</li>
+            <li>Modalidad: Presencial o virtual</li>
+            <li>Nivel: Inicial</li>
+        </ul>
+    </section>
+    <section id="inscripcion">
+        <h2>Formulario de inscripcion</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <br><br>
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fecha" required>            
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <label for="email">Correo electronico</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+       </fieldset>
+       <br>
+       <fieldset>
+        <legend>Datos del curso</legend>
+        <label for="curso">Selecciona el curso:</label>
+        <select id="curso" name="curso" required>
+        <option value="">Seleccionar</option>
+        <optgroup label="Ingles">
+            <option value="ingles-basico">Ingles Basico</option>
+            <option value="ingles-intermedio">Ingles Intermedio</option>
+        </optgroup>
+        <optgroup label="Conversacion">
+            <option value="conversacion-basica">Conversacion Basica</option>
+        </optgroup>
+        </select>
+        <br><br>
+        <p>Elegi la modalidad:</p>
+        <input type="radio" id="presencial" name="modalidad" value="presencial" required>
+        <label for="presencial">Presencial</label>
+        <input type="radio" id="virtual" name="modalidad" value="virtual">
+        <label for="virtual">Virtual</label>
+     </fieldset>
+     <br>
+     <fieldset>
+        <legend>Conocimientos Previos</legend>
+        <input type="checkbox" id="gramatica" name="conocimientos" value="gramatica">
+        <label for="gramatica">Gramatica</label>
+        <br>
+        <input type="checkbox" id="lectura" name="conocimientos" value="lectura">
+        <label for="lectura">Lectura en ingles</label>
+        <br>
+        <input type="checkbox" id="conversacion" name="conocimientos" value="conversacion">
+        <label for="conversacion">Conversacion</label>
+        <br>
+        <input type="checkbox" id="ninguno" name="conocimientos" value="ninguno">
+        <label for="ninguno">Ninguno</label>
+    </fieldset>
+    <br>
+    <label for="comentario">Comentarios:</label>
+    <br>
+    <textarea id="comentarios" name="comentarios" rows="5" cols="40"></textarea>
+    <br><br>
+    <input type="checkbox" id="condiciones" name="condiciones">
+    <label for="condiciones">Acepto los terminos y condiciones.</label>
+    <br><br>
+    <button type="reset">Limpiar formulario</button>
+    </form>
+    </section>
+    <section id="contacto">
+        <h2>Mas informacion</h2>
+        <p>Para conocer mas sobre el aprendizaje del idioma ingles, podes consultar el sitio oficial del Bristish Council.</p>
+        <a href="https://www.bristishcouincil.org/english" target="_blank">Sitio oficial del British Council</a>
+ </section>
+</main>
+<footer>
+    <p>Curso de Ingles Basico - Formulario de inscripcion </p>
+</footer>
+</body>
+</html>
