@@ -1,0 +1,467 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+    --fondo: #101923;
+    --superficie: #192633;
+    --superficie-clara: #223442;
+    --texto: #e8f0f3;
+    --secundario: #afc0c8;
+    --principal: #43d6c5;
+    --principal-oscuro: #0c9d92;
+    --acento: #ffbd59;
+    --borde: #344a57;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+a {
+    color: var(--principal);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 3px;
+}
+
+.contenedor {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.selector-de-estilos {
+    padding: 10px 20px;
+    background: #091119;
+    color: var(--secundario);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.selector-de-estilos a {
+    margin-inline: 10px;
+    color: var(--principal);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.selector-de-estilos a:hover {
+    color: var(--acento);
+}
+
+#encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-block: 14px;
+}
+
+#encabezado h1 {
+    margin: 0;
+    line-height: 0;
+}
+
+#encabezado h1 img {
+    display: block;
+    width: min(180px, 28vw);
+    height: auto;
+    filter: drop-shadow(0 6px 12px rgb(0 0 0 / 35%));
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 11px;
+    border-radius: 4px;
+    color: var(--texto);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: var(--superficie-clara);
+    color: var(--principal);
+}
+
+.presentacion {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background:
+        radial-gradient(ellipse at 85% 15%, rgb(67 214 197 / 19%), transparent 34%),
+        linear-gradient(115deg, #132432, #0d1720 70%);
+    border-block: 1px solid var(--borde);
+}
+
+.presentacion .contenedor {
+    max-width: 1180px;
+}
+
+.texto-destacado {
+    margin: 0 0 14px;
+    color: var(--principal);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.presentacion h2 {
+    max-width: 760px;
+    margin: 0 0 18px;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.02;
+}
+
+.presentacion .contenedor > p:not(.texto-destacado) {
+    max-width: 590px;
+    margin: 0 0 28px;
+    color: var(--secundario);
+    font-size: 1.15rem;
+}
+
+.boton,
+.acciones-formulario button {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--principal);
+    color: #071814;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover,
+.acciones-formulario button:hover {
+    background: var(--acento);
+}
+
+.seccion {
+    padding-block: 72px;
+}
+
+.seccion > h2,
+.encabezado-seccion h2 {
+    margin: 0 0 10px;
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+}
+
+.encabezado-seccion {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.encabezado-seccion p,
+.contenido-institucional p {
+    color: var(--secundario);
+}
+
+.contenido-institucional {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 36px;
+}
+
+.contenido-institucional figure {
+    position: relative;
+    margin: 0;
+}
+
+.contenido-institucional img {
+    display: block;
+    width: 100%;
+    max-height: 390px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 9px;
+    color: var(--secundario);
+    font-size: 0.85rem;
+}
+
+.lista-actividades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.actividad {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.2fr);
+    overflow: hidden;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.actividad > img {
+    width: 100%;
+    height: 100%;
+    min-height: 290px;
+    object-fit: cover;
+}
+
+.contenido-actividad {
+    padding: 20px;
+}
+
+.contenido-actividad h3,
+.espacio h3 {
+    margin: 0 0 8px;
+    color: var(--principal);
+    font-size: 1.3rem;
+}
+
+.contenido-actividad p {
+    margin-block: 0 12px;
+    color: var(--secundario);
+}
+
+.datos-actividad {
+    display: grid;
+    gap: 5px;
+    margin: 14px 0;
+    padding-left: 18px;
+    color: var(--secundario);
+    font-size: 0.85rem;
+}
+
+.enlace {
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--superficie);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    padding: 16px;
+    color: var(--principal);
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px 18px;
+    border-top: 1px solid var(--borde);
+}
+
+thead {
+    background: var(--superficie-clara);
+}
+
+tbody tr:hover {
+    background: #20313d;
+}
+
+.lista-espacios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.espacio {
+    padding: 26px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-left: 3px solid var(--principal);
+    border-radius: 6px;
+}
+
+.espacio p {
+    margin-bottom: 0;
+    color: var(--secundario);
+}
+
+.formulario {
+    max-width: 780px;
+    margin-inline: auto;
+    padding: 30px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.grupo-formulario {
+    display: grid;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.grupo-formulario label,
+.grupo-formulario legend {
+    color: var(--texto);
+    font-weight: 700;
+}
+
+.grupo-formulario input:not([type="radio"]),
+.grupo-formulario select,
+.grupo-formulario textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    background: #101923;
+    color: var(--texto);
+    font: inherit;
+}
+
+.grupo-formulario input::placeholder,
+.grupo-formulario textarea::placeholder {
+    color: #81939d;
+}
+
+fieldset.grupo-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    padding: 14px;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+}
+
+fieldset legend {
+    padding-inline: 6px;
+}
+
+.acciones-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acciones-formulario button[type="reset"] {
+    border: 1px solid var(--borde);
+    background: transparent;
+    color: var(--texto);
+}
+
+.pie-pagina {
+    padding-block: 48px 20px;
+    background: #091119;
+    color: var(--secundario);
+}
+
+.pie-pagina h2,
+.pie-pagina h3 {
+    color: var(--texto);
+}
+
+.pie-pagina a {
+    color: var(--principal);
+}
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    margin-block: 22px;
+}
+
+.redes-sociales h3 {
+    width: 100%;
+    margin: 0;
+}
+
+.copyright {
+    margin: 28px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--borde);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 960px) {
+    .actividad {
+        grid-template-columns: 1fr;
+    }
+
+    .actividad > img {
+        height: 200px;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    #encabezado {
+        flex-direction: column;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .contenido-institucional,
+    .lista-actividades,
+    .lista-espacios {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .presentacion {
+        padding-block: 70px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 11px;
+    }
+}
